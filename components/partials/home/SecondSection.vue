@@ -1,6 +1,7 @@
 <template>
     <section class="text-white overflow-hidden">
-        <div class="max-w-[68.5rem] mx-auto h-screen max-h-[62.5rem] items-center flex lg:justify-between relative px-4 lg:px-16 xl:px-0">
+        <div class="max-w-[68.5rem] mx-auto py-[200px] items-center flex lg:justify-between relative px-4 sm:px-16 lg:px-16
+        lg:pt-[177px] lg:pb-[226px] xl:px-0">
             <!-- text content -->
             <div class="absolute top-1/2 -translate-y-1/2 left-16 sm:left-28 max-w-lg lg:relative lg:top-0 lg:left-0 flex
                 lg:translate-y-0 xl:max-w-xl">
