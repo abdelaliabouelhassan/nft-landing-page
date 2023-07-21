@@ -1,8 +1,8 @@
 <template>
     <div>
-        <!-- <HeroSection />
+        <HeroSection />
         <SecondSection />
-        <ThirdSection /> -->
+        <ThirdSection />
         <FourthSectin />
     </div>
 </template>
