@@ -4,19 +4,27 @@
             <div class="relative flex text-white self-end lg:self-auto ">
                 <h1 class="text-[3.75rem] max-w-xs text-end z-10 font-bold lg:text-start">Utility Functions</h1>
                 <!-- blur 1 -->
-                <div class="w-[344px] h-[310px] absolute -top-[40px] -right-8 blur-[55px] overflow-hidden z-0 lg:hidden">
-                    <BlurUnit class="w-[344px] h-[310px] absolute -top-0 right-0  -rotate-[-120deg] blur-[100px]"/>
+                <div class="w-[344px] h-[310px] absolute -top-[40px] -right-8 blur-[50px] overflow-hidden z-0 lg:hidden">
+                    <BlurUnit class="w-[344px] h-[310px] absolute -top-0 right-0  blur-[80px]"/>
                 </div>
+                
                 <!-- blur 2 -->
-                <div class="hidden absolute -top-36 -left-20 z-0 lg:block w-[505px]  h-[536px] rounded-full overflow-hidden blur-[80px]">
-                    <BlurUnit class="absolute -top-0 left-[45px] rotate-[-120deg] blur-[100px] w-[319px] h-[253px]"/>
-                    <BlurUnit class="absolute -top-0 left-0 rotate-[-120deg] blur-[100px] w-[319px] h-[253px]"/>
+                <div class="hidden absolute -top-[110px] -left-20 z-0 lg:block w-[403px]  h-[401px] rounded-full overflow-hidden blur-[80px]">
+                    <div class="absolute top-0 left-0">
+                        <div class="absolute top-0 left-[24px]">
+                            <BlurUnit class="blur-[80px]"/>
+                        </div>
+                        <div class="absolute left-[64px] top-[90px]">
+                            <BlurUnit class="blur-[80px]"/>
+                        </div>
+                    </div>
+                    
                 </div>
             </div>
-            <div class="flex flex-col gap-y-8">
+            <div class="flex flex-col gap-y-8 ">
                 <div class="flex items-center gap-x-10 list-element cursor-default">
                     <div class="h-[100px] w-[100px] rounded-full flex items-center justify-center 
-                    list-element-gradient text-white text-4xl">1</div>
+                    list-element-gradient text-white text-4xl shrink-0">1</div>
                     <div class="text-[25px] lg:text-3xl">Utility 1 is this thing that does 12</div>
                 </div>
                 <div class="flex items-center gap-x-10 list-element cursor-default">
@@ -49,7 +57,7 @@
     </section>
 </template>
 <script setup>
-import BlurUnit from "@/components/UI/BlurUnit.vue"; 
+import BlurUnit from "@/components/UI/BlurUnitRotated.vue"; 
 
 </script>
 <style scoped>

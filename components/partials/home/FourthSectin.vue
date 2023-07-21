@@ -64,7 +64,7 @@
             </div>
 
             <!-- blurs 2-->
-            <div class="hidden absolute -top-[247px] xl:-top-[113px]  left-1/2 -translate-x-1/3 w-full lg:block">
+            <div class="hidden absolute -top-[247px] xl:-top-[113px]  left-16 w-full lg:block">
                 <div class="absolute top-0 left-0 w-[622px] h-[500px] blur-[80px] overflow-hidden">
                     <div class="absolute top-0 left-0">
                         <div class="absolute top-0 left-[24px]">
@@ -86,7 +86,8 @@
                 
             </div>
             <!-- blurs 3-->
-            <div class="hidden absolute top-[187px] right-[141px] w-[444px] h-[506px] blur-[80px] overflow-hidden lg:block">
+            <div class="hidden absolute top-[220px] right-[220px] w-[444px] h-[506px] blur-[80px] overflow-hidden lg:block
+            xl:top-[300px] xl:right-[200px]">
                     <div class="absolute top-0 left-0">
                         <div class="absolute top-0 left-[24px]">
                             <BlurUnit class="blur-[80px]"/>
