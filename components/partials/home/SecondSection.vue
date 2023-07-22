@@ -8,7 +8,9 @@
                 <div class="z-10 flex flex-col font-medium">
                     <h1 class="text-[3.75rem] ">Earn More DeGa</h1>
                     <h2 class="text-3xl mt-1 leading-loose xl:leading-normal">Unleash the power of our Utility based NFT’s collection</h2> 
-                    <BaseButton class="w-fit mt-6 xl:mt-8">Buy now</BaseButton>
+                    <button class="w-fit mt-6 xl:mt-8 flex items-center justify-center px-9 py-3 text-3xl bg-white text-primary rounded-lg font-semibold">
+                        Buy now
+                    </button>
                 </div>
 
                 <!-- blur group 1 -->
@@ -44,6 +46,5 @@
 
 <script setup>
 import BlurUnit from "@/components/UI/BlurUnit.vue"; 
-import BaseButton from "@/components/UI/BaseButton.vue"; 
 
 </script>

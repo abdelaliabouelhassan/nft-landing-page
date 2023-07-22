@@ -1,5 +1,5 @@
 <template>
-    <section class="max-w-[96rem] mx-auto 2xl:mt-8  pt-[182px]">
+    <section class="max-w-[96rem] mx-auto 2xl:mt-8  pt-[182px] pb-[371px] lg:pb-[257px]">
         <BaseCarousel class="flex pl-4 sm:pl-12 lg:pl-16">
 
             <div class="flex flex-col max-w-[310px] shrink-0">

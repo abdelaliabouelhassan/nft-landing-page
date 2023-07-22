@@ -1,7 +1,9 @@
 <template>
-    <section class="flex justify-center pt-[226px] sm:pt-[496px] sm:pb-[362px] px-4 overflow-x-clip">
+    <section class="flex justify-center px-4 overflow-x-clip pt-[226px] pb-[243px] sm:pt-[496px] sm:pb-[362px]  
+    lg:pt-[209px] lg:pb-[255px]">
         <div class="relative flex justify-center w-full  mx-auto px-4 sm:px-16 lg:px-16 lg:justify-normal lg:w-full lg:max-w-[68.5rem]">
-            <div class="flex rounded-3xl overflow-hidden h-[144px] bg-black relative w-full max-w-[512px] z-10 lg:hidden">
+            <!-- small screen content -->
+            <div class="flex rounded-2xl overflow-hidden h-[144px] bg-black relative w-full max-w-[512px] z-10 lg:hidden">
                 <div class=" text-white pb-[17px] h-full pr-4 relative w-[313px]">
                     <img class="" src="/images/home/certic-logo.svg" alt="" srcset="">
                     <div class="text-[32px] font-bold leading-snug absolute bottom-[17px] left-1/2 -translate-x-1/2 w-max">Secruity Audit</div>
@@ -16,6 +18,7 @@
                 </div>
             </div>
 
+            <!-- big screen content -->
             <div class="hidden w-full grow lg:flex items-center justify-between z-10 gap-x-10">
                 <div class="shrink-0">
                     <img src="/images/home/security-audit.svg" alt="" srcset="">
@@ -27,8 +30,8 @@
                 </div>
             </div>
 
-            <!-- blur group 2 lg-->
-            <div class=" lg:block absolute -top-[200px]  left-[10%] z-0 lg:top-10 lg:left-8">
+            <!-- blur group -->
+            <div class="hidden sm:block absolute -top-[200px]  left-[10%] z-0 lg:top-10 lg:left-8">
                 <div class="absolute top-0 left-[88px] ">
                     <div class="absolute top-0 left-0">
                         <BlurUnit class="blur-[60px]"/>

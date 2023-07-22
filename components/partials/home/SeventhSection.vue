@@ -10,7 +10,9 @@
                     <h1 class="text-[3.75rem] ">V.I.P rewards</h1>
                     <h2 class="text-3xl mt-1 leading-loose xl:leading-normal">Details about the V.I.P</h2> 
                     <h2 class="text-3xl mt-1 leading-loose xl:leading-normal">rewards can be found here</h2> 
-                    <BaseButton class="w-fit mt-6 xl:mt-8">Buy now</BaseButton>
+                    <button class="w-fit mt-6 xl:mt-8 flex items-center justify-center px-9 py-3 text-3xl bg-white text-primary rounded-lg font-semibold">
+                        Buy now
+                    </button>
                 </div>
 
                 <!-- blur group  -->
@@ -32,6 +34,5 @@
 
 <script setup>
 import BlurUnit from "@/components/UI/BlurUnitRotated.vue"; 
-import BaseButton from "@/components/UI/BaseButton.vue"; 
 
 </script>
