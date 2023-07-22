@@ -2,7 +2,10 @@
     <section class="pt-[52px] flex flex-col px-4 pb-[210px] sm:px-16 lg:px-16 lg:flex-row lg:items-center lg:gap-x-14 justify-between
         max-w-[68.5rem] mx-auto xl:px-0 lg:pt-[200px] overflow-x-clip lg:overflow-x-visible">
             <div class="relative flex text-white self-end lg:self-auto ">
-                <h1 class="text-[3.75rem] max-w-xs text-end z-10 font-bold lg:text-start">Utility Functions</h1>
+                <div class="text-[3.75rem] max-w-xs text-end z-10 font-bold lg:text-start">
+                    <Title text="Utility Functions"/>
+                </div>
+                <!-- <h1 >Utility Functions</h1> -->
                 <!-- blur 1 -->
                 <div class="w-[344px] h-[310px] absolute -top-[40px] -right-8 blur-[50px] overflow-hidden z-0 lg:hidden">
                     <BlurUnit class="w-[344px] h-[310px] absolute -top-0 right-0  blur-[80px]"/>
@@ -58,6 +61,7 @@
 </template>
 <script setup>
 import BlurUnit from "@/components/UI/BlurUnitRotated.vue"; 
+import Title from "@/components/UI/Title.vue";
 
 </script>
 <style scoped>

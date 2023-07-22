@@ -7,7 +7,9 @@
             <div class="absolute top-1/2 -translate-y-1/2 right-36 flex justify-end w-fit max-w-lg sm:right-48 lg:relative lg:top-0 lg:right-0 
                 lg:translate-y-0 xl:max-w-md">
                 <div class="z-10 flex flex-col font-medium w-fit items-end text-end lg:text-start lg:items-start">
-                    <h1 class="text-[3.75rem] ">V.I.P rewards</h1>
+                    <div class="text-[3.75rem]">
+                        <Title text="V.I.P rewards"/>
+                    </div>
                     <h2 class="text-3xl mt-1 leading-loose xl:leading-normal">Details about the V.I.P</h2> 
                     <h2 class="text-3xl mt-1 leading-loose xl:leading-normal">rewards can be found here</h2> 
                     <button class="w-fit mt-6 xl:mt-8 flex items-center justify-center px-9 py-3 text-3xl bg-white text-primary rounded-lg font-semibold">
@@ -24,7 +26,7 @@
                     
             </div>
             <!-- section img -->
-            <div class="shrink-0">
+            <div class="shrink-0 image-container" id="card2">
                 <img class="h-[600px] w-[422px]" src="/images/home/kisshiim_Boba_Fett_in_free_fall_red_neon_tones_style_of_Malika.svg" alt="" srcset="">
             </div>
             
@@ -34,5 +36,18 @@
 
 <script setup>
 import BlurUnit from "@/components/UI/BlurUnitRotated.vue"; 
+import Title from "@/components/UI/Title.vue";
+
+onMounted(() => {
+    const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add("side-from-right");
+            observer.unobserve(entry.target);
+        }
+     });
+    });
+    observer.observe(document.querySelector("#card2"));
+});
 
 </script>

@@ -35,7 +35,7 @@ class Title{
             this.frame++;
             requestAnimationFrame(this.animate.bind(this))
         }else{
-            console.log('done')
+            //console.log('done')
             this.element.innerHTML = this.originalString;
         }
     }

@@ -31,8 +31,9 @@
                     </div>
                     
                 </div>
-                
-                <h1 class="text-[3.75rem] font-bold text-center max-w-[400px] text-white ">Staking Coming soon</h1>
+                <div class="text-[3.75rem] font-bold text-center max-w-[400px] text-white ">
+                    <Title text="Staking Coming soon"/>
+                </div>
             </div>
 
             <!-- blurs 1-->
@@ -105,5 +106,6 @@
 
 <script setup>
 import BlurUnit from "@/components/UI/BlurUnitRotated.vue"; 
+import Title from "@/components/UI/Title.vue";
 
 </script>

@@ -12,10 +12,3 @@
     }
  )
 </script>
-
-
-<style scoped>
-h1 {
-     @apply text-[3.75rem];
-}
-</style>
