@@ -1,11 +1,12 @@
 <template>
-    <section class="text-white overflow-hidden">
-        <div class="max-w-[68.5rem] mx-auto py-[200px] items-center flex lg:justify-between relative px-4 sm:px-16 lg:px-16
-        lg:pt-[177px] lg:pb-[226px] xl:px-0">
-            <!-- text content -->
-            <div class="absolute top-1/2 -translate-y-1/2 left-16 sm:left-28 max-w-lg lg:relative lg:top-0 lg:left-0 flex
+    <section class="text-white overflow-hidden py-[200px] lg:pt-[177px] lg:pb-[226px]" >
+        <div ref="contentContainer" class="max-w-[68.5rem]  mx-auto items-center flex lg:justify-between relative px-4 sm:px-16 lg:px-16
+         xl:px-0">
+            <!-- section content -->
+            <div  class=" absolute top-1/2 -translate-y-1/2 left-16 sm:left-28 max-w-lg lg:relative lg:top-0 lg:left-0 flex
                 lg:translate-y-0 xl:max-w-xl">
-                <div class="z-10 flex flex-col font-medium ">
+                <!-- content -->
+                <div class=" content z-10 flex flex-col font-medium ">
                     <div class=" text-[2.25rem] sm:text-[3.75rem]">
                         <Title  text="Earn More DeGa" />
                     </div>
@@ -26,7 +27,7 @@
                 </div>
                 
                 <!-- blur group 2 lg-->
-                <div class="hidden lg:block absolute -top-[175px] -left-[56px]  z-0">
+                <div class="blur-group hidden lg:block absolute -top-[175px] -left-[56px]  z-0">
                     <!-- blur circle -->
                     <BlurUnit class="absolute top-0" />
                         
@@ -50,20 +51,58 @@
 import BlurUnit from "@/components/UI/BlurUnit.vue"; 
 import Title from "@/components/UI/Title.vue";
 
-//observer for card animation
+const contentContainer = ref(null)
+const maxOffset = ref(150)
+const offset = ref(0)
 
+const getContentOffset = computed(()=> `-${offset.value}px`)
+const getBlurOffset = computed(()=> `${offset.value}px`)
+
+function setOffset() {
+    //animation 1
+    offset.value = ( (contentContainer.value.getBoundingClientRect().bottom - contentContainer.value.offsetHeight)/ contentContainer.value.offsetHeight ) * maxOffset.value
+    //animation 2
+    // offset.value = ( -(contentContainer.value.getBoundingClientRect().top - contentContainer.value.offsetHeight)/ contentContainer.value.offsetHeight ) * maxOffset.value
+    
+    if(offset.value > maxOffset.value){
+        offset.value = maxOffset.value
+    }
+    else if(offset.value < 0){
+        offset.value = 0
+    }
+    // console.log(offset.value)
+    // console.log((contentContainer.value.getBoundingClientRect().bottom - contentContainer.value.offsetHeight)/ contentContainer.value.offsetHeight)
+   
+}
+
+//observer for card animation
 onMounted(() => {
+    window.addEventListener('scroll',setOffset)
+
     const observer = new IntersectionObserver((entries) => {
-    entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-            entry.target.classList.add("side-from-right");
-            observer.unobserve(entry.target);
-        }
-     });
+        entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add("side-from-right");
+                observer.unobserve(entry.target);
+            }
+        });
     });
     observer.observe(document.querySelector("#card"));
 });
+onUnmounted(()=>{
+    window.removeEventListener('scroll',setOffset)
+})
 
 
 
 </script>
+<style scoped>
+.content{
+    transform: translateY(v-bind(getContentOffset));
+    transition: transform 200ms ease;
+}
+.blur-group{
+    transform: translateY(v-bind(getBlurOffset));
+    transition: transform 200ms ease;
+}
+</style>

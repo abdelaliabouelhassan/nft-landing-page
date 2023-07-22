@@ -6,40 +6,40 @@
             <!-- pages links -->
             <div class="pt-[145px] flex text-white gap-x-10 justify-between text-[25px] font-light">
                 <div class="flex flex-col gap-y-6 w-full">
-                    <a href="#">Roadmap</a>
-                    <a href="#">Community</a>
-                    <a href="#">Blog</a>
+                    <a href="#" class="hover:opacity-60 transition-colors duration-150 ease-linear">Roadmap</a>
+                    <a href="#" class="hover:opacity-60 transition-colors duration-150 ease-linear">Community</a>
+                    <a href="#" class="hover:opacity-60 transition-colors duration-150 ease-linear">Blog</a>
                 </div>
                 <div class="flex flex-col gap-y-6 w-full">
-                    <a href="#">FAQ's</a>
-                    <a href="#">Contact</a>
-                    <a href="#">Terms and conditions</a>
+                    <a href="#" class="hover:opacity-60 transition-colors duration-150 ease-linear">FAQ's</a>
+                    <a href="#" class="hover:opacity-60 transition-colors duration-150 ease-linear">Contact</a>
+                    <a href="#" class="hover:opacity-60 transition-colors duration-150 ease-linear">Terms and conditions</a>
                 </div>
                 <div class="flex flex-col gap-y-6 w-full">
-                    <a href="#">Discord</a>
-                    <a href="#">Instagram</a>
-                    <a href="#">Telegram</a>
-                    <a href="#">Twitter</a>
+                    <a href="#" class="hover:opacity-60 transition-colors duration-150 ease-linear">Discord</a>
+                    <a href="#" class="hover:opacity-60 transition-colors duration-150 ease-linear">Instagram</a>
+                    <a href="#" class="hover:opacity-60 transition-colors duration-150 ease-linear">Telegram</a>
+                    <a href="#" class="hover:opacity-60 transition-colors duration-150 ease-linear">Twitter</a>
                 </div>
             </div>
             
             <!-- social media -->
             <div class="grid grid-cols-2 w-fit gap-10 sm:grid-cols-4 pt-[100px]">
                 <!-- twitter -->
-                <a href="#" class="rounded-full w-[87px] h-[87px] bg-[#112A34] flex items-center justify-center">
+                <a href="#" class="rounded-full w-[87px] h-[87px] bg-[#112A34] flex items-center justify-center hover:scale-110 transition-all duration-150 ease-linear">
                     <img src="/images/footer/twitter-logo.svg" alt="">
                 </a>
                 <!-- telegram -->
-                <a href="#" class="rounded-full w-[87px] h-[87px] bg-[#112A34] flex items-center justify-center">
+                <a href="#" class="rounded-full w-[87px] h-[87px] bg-[#112A34] flex items-center justify-center  hover:scale-110 transition-all duration-150 ease-linear">
                     <img src="/images/footer/telegram-logo.svg" alt="">
                     
                 </a>
                 <!-- instagram -->
-                <a href="#" class="rounded-full w-[87px] h-[87px] bg-[#112A34] flex items-center justify-center">
+                <a href="#" class="rounded-full w-[87px] h-[87px] bg-[#112A34] flex items-center justify-center  hover:scale-110 transition-all duration-150 ease-linear">
                     <img src="/images/footer/instagram-logo.svg" alt="">
                 </a>
                 <!-- discord -->
-                <a href="#" class="rounded-full w-[87px] h-[87px] bg-[#112A34] flex items-center justify-center">
+                <a href="#" class="rounded-full w-[87px] h-[87px] bg-[#112A34] flex items-center justify-center  hover:scale-110 transition-all duration-150 ease-linear">
                     <img src="/images/footer/discord-logo.svg" alt="">
                 </a>
             </div>
