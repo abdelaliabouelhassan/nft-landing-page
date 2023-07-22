@@ -4,7 +4,7 @@
          xl:px-0">
             <!-- section content -->
             <div  class=" absolute top-1/2 -translate-y-1/2 left-16 sm:left-28 max-w-lg lg:relative lg:top-0 lg:left-0 flex
-                lg:translate-y-0 xl:max-w-xl">
+                lg:translate-y-0 xl:max-w-xl z-10">
                 <!-- content -->
                 <div class=" content z-10 flex flex-col font-medium ">
                     <div class=" text-[2.25rem] sm:text-[3.75rem]">
@@ -52,23 +52,33 @@ import BlurUnit from "@/components/UI/BlurUnit.vue";
 import Title from "@/components/UI/Title.vue";
 
 const contentContainer = ref(null)
-const maxOffset = ref(150)
-const offset = ref(0)
+const maxOffsetContent = ref(150)
+const maxOffsetBlur = ref(250)
+const offsetContent = ref(0)
+const offsetBlur = ref(0)
 
-const getContentOffset = computed(()=> `-${offset.value}px`)
-const getBlurOffset = computed(()=> `${offset.value}px`)
+const getContentOffset = computed(()=> `-${offsetContent.value}px`)
+const getBlurOffset = computed(()=> `${offsetBlur.value}px`)
 
 function setOffset() {
     //animation 1
-    offset.value = ( (contentContainer.value.getBoundingClientRect().bottom - contentContainer.value.offsetHeight)/ contentContainer.value.offsetHeight ) * maxOffset.value
+    offsetContent.value = ( (contentContainer.value.getBoundingClientRect().bottom - contentContainer.value.offsetHeight)/ contentContainer.value.offsetHeight ) * maxOffsetContent.value
+    offsetBlur.value = ( (contentContainer.value.getBoundingClientRect().bottom - contentContainer.value.offsetHeight)/ contentContainer.value.offsetHeight ) * maxOffsetBlur.value
     //animation 2
     // offset.value = ( -(contentContainer.value.getBoundingClientRect().top - contentContainer.value.offsetHeight)/ contentContainer.value.offsetHeight ) * maxOffset.value
     
-    if(offset.value > maxOffset.value){
-        offset.value = maxOffset.value
+    if(offsetContent.value > maxOffsetContent.value){
+        offsetContent.value = maxOffsetContent.value
     }
-    else if(offset.value < 0){
-        offset.value = 0
+    else if(offsetContent.value < 0){
+        offsetContent.value = 0
+    }
+
+    if(offsetBlur.value > maxOffsetBlur.value){
+        offsetBlur.value = maxOffsetBlur.value
+    }
+    else if(offsetBlur.value < 0){
+        offsetBlur.value = 0
     }
     // console.log(offset.value)
     // console.log((contentContainer.value.getBoundingClientRect().bottom - contentContainer.value.offsetHeight)/ contentContainer.value.offsetHeight)
