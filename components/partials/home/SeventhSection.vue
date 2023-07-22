@@ -1,6 +1,6 @@
 <template>
     <section class="text-white overflow-x-clip">
-        <div class="max-w-[68.5rem] mx-auto pt-[219px] pb-[184px] items-center flex justify-end lg:justify-between relative px-4 sm:px-16 lg:px-16
+        <div class="max-w-[68.5rem] mx-auto pb-[219px] pt-[184px] items-center flex justify-end lg:justify-between relative px-4 sm:px-16 lg:px-16
           xl:px-0">
             
             <!-- text content -->
