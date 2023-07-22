@@ -6,7 +6,7 @@
             <div class="absolute top-1/2 -translate-y-1/2 left-16 sm:left-28 max-w-lg lg:relative lg:top-0 lg:left-0 flex
                 lg:translate-y-0 xl:max-w-xl">
                 <div class="z-10 flex flex-col font-medium">
-                    <h1 class="text-[3.75rem] ">Earn More DeGa</h1>
+                    <UITestTitle  text="Earn More DeGa" />
                     <h2 class="text-3xl mt-1 leading-loose xl:leading-normal">Unleash the power of our Utility based NFT’s collection</h2> 
                     <button class="w-fit mt-6 xl:mt-8 flex items-center justify-center px-9 py-3 text-3xl bg-white text-primary rounded-lg font-semibold">
                         Buy now
