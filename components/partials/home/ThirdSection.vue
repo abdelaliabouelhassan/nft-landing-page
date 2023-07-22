@@ -21,36 +21,36 @@
                     
                 </div>
             </div>
-            <div class="flex flex-col gap-y-8 ">
-                <div class="flex items-center gap-x-10 list-element cursor-default">
+            <div class="flex max-w-[619px] w-full flex-col gap-y-8 ">
+                <div class="flex items-center gap-x-10 list-element cursor-default group ">
                     <div class="h-[100px] w-[100px] rounded-full flex items-center justify-center 
                     list-element-gradient text-white text-4xl shrink-0">1</div>
-                    <div class="text-[25px] lg:text-3xl">Utility 1 is this thing that does 12</div>
+                    <div class="text-[25px] lg:text-3xl group-hover:font-bold">Utility 1 is this thing that does 12</div>
                 </div>
-                <div class="flex items-center gap-x-10 list-element cursor-default">
+                <div class="flex items-center gap-x-10 list-element cursor-default group">
                     <div class="h-[100px] w-[100px] rounded-full flex items-center justify-center 
                     list-element-gradient text-white text-4xl">2</div>
-                    <div class="text-[25px] lg:text-3xl">Utility 2</div>
+                    <div class="text-[25px] lg:text-3xl group-hover:font-bold">Utility 2</div>
                 </div>
-                <div class="flex items-center gap-x-10 list-element cursor-default">
+                <div class="flex items-center gap-x-10 list-element cursor-default group">
                     <div class="h-[100px] w-[100px] rounded-full flex items-center justify-center 
                     list-element-gradient text-white text-4xl">3</div>
-                    <div class="text-[25px] lg:text-3xl">Utility 3</div>
+                    <div class="text-[25px] lg:text-3xl group-hover:font-bold">Utility 3</div>
                 </div>
-                <div class="flex items-center gap-x-10 list-element cursor-default">
+                <div class="flex items-center gap-x-10 list-element cursor-default group">
                     <div class="h-[100px] w-[100px] rounded-full flex items-center justify-center 
                     list-element-gradient text-white text-4xl">4</div>
-                    <div class="text-[25px] lg:text-3xl">Utility 4</div>
+                    <div class="text-[25px] lg:text-3xl group-hover:font-bold">Utility 4</div>
                 </div>
-                <div class="flex items-center gap-x-10 list-element cursor-default">
+                <div class="flex items-center gap-x-10 list-element cursor-default group">
                     <div class="h-[100px] w-[100px] rounded-full flex items-center justify-center 
                     list-element-gradient text-white text-4xl">5</div>
-                    <div class="text-[25px] lg:text-3xl">Utility 5</div>
+                    <div class="text-[25px] lg:text-3xl group-hover:font-bold">Utility 5</div>
                 </div>
-                <div class="flex items-center gap-x-10 list-element cursor-default">
+                <div class="flex items-center gap-x-10 list-element cursor-default group">
                     <div class="h-[100px] w-[100px] rounded-full flex items-center justify-center 
                     list-element-gradient text-white text-4xl">6</div>
-                    <div class="text-[25px] lg:text-3xl">Utility 6</div>
+                    <div class="text-[25px] lg:text-3xl group-hover:font-bold">Utility 6</div>
                 </div>
             </div>
 

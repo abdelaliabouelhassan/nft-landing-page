@@ -23,7 +23,7 @@
                     </div>
 
                     <!-- comming soon card -->
-                    <div class="bg-white flex flex-col items-center gap-y-10 overflow-hidden rounded-2xl py-10 w-full  relative text-center px-8 xl:gap-y-16">
+                    <div class="bg-white hover:shadow-2xl duration-100 flex flex-col items-center gap-y-10 overflow-hidden rounded-2xl py-10 w-full  relative text-center px-8 xl:gap-y-16">
                         <div class="bg-primary text-white py-2 px-6 absolute top-0 right-0"> comming soon</div>
                         <div class="text-[26px] font-bold xl:text-[38px]"> stake your NFT’s and earn DeGa </div>
                         <div class="font-bold xl:text-2xl">Staking coming soon</div>
