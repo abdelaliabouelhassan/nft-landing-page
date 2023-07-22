@@ -44,8 +44,8 @@
                 </a>
             </div>
             <div class="flex items-center gap-x-32 gap-y-5 w-fit pt-[42px] flex-wrap">
-                <img src="images/coin-games-logo.svg" alt="" srcset="">
-                <img src="images/de-ga-logo.svg" alt="" srcset="">
+                <img src="/images/coin-games-logo.svg" alt="" srcset="">
+                <img src="/images/de-ga-logo.svg" alt="" srcset="">
             </div>
         </div>
     </footer>
