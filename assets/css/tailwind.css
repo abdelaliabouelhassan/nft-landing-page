@@ -1,0 +1,41 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    font-family: "Space Grotesk", sans-serif;
+  }
+}
+
+
+.image-container {
+  overflow: hidden;
+  opacity: 0;
+}
+
+.side-from-right {
+  opacity: 0;
+  transform: translateX(100%);
+  animation: slideFromRight 1s ease forwards;
+}
+
+@keyframes slideFromRight {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.side-from-left {
+  opacity: 0;
+  transform: translateX(-100%);
+  animation: slideFromLeft 1s ease forwards;
+}
+
+@keyframes slideFromLeft {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
