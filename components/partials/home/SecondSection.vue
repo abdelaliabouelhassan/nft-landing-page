@@ -1,28 +1,29 @@
 <template>
-    <section class="text-white overflow-hidden py-[200px] lg:pt-[177px] lg:pb-[226px]" >
+    <section class="text-white overflow-hidden py-[150px] sm:py-[200px] lg:pt-[177px] lg:pb-[226px]" >
         <div ref="contentContainer" class="max-w-[68.5rem]  mx-auto items-center flex lg:justify-between relative px-4 sm:px-16 lg:px-16
          xl:px-0">
             <!-- section content -->
-            <div  class=" absolute top-1/2 -translate-y-1/2 left-16 sm:left-28 max-w-lg lg:relative lg:top-0 lg:left-0 flex
+            <div class=" absolute top-1/2 -translate-y-1/2 left-16 mr-4 max-w-xs sm:left-28 sm:max-w-lg lg:relative lg:top-0 lg:left-0 flex
                 lg:translate-y-0 xl:max-w-xl z-10">
                 <!-- content -->
-                <div class=" content z-10 flex flex-col font-medium ">
-                    <div class=" text-[2.25rem] sm:text-[3.75rem]">
+                <div class=" content z-10 flex flex-col font-medium  ">
+                    <div class="text-[2.25rem] sm:text-[3.75rem]">
                         <Title  text="Earn More DeGa" />
                     </div>
                     <h2 class=" text-lg sm:text-3xl mt-1 leading-loose xl:leading-normal">Unleash the power of our Utility based NFT’s collection</h2> 
-                    <button class="w-fit mt-6 xl:mt-8 flex items-center justify-center px-9 py-3 text-lg sm:text-3xl bg-white text-primary rounded-lg font-semibold">
+                    <button class="w-fit mt-6 xl:mt-8 flex items-center justify-center px-9 py-3 text-lg sm:text-3xl bg-white text-primary rounded-lg font-semibold
+                            hover:bg-primary hover:text-white transition-colors duration-100 ease-linear">
                         Buy now
                     </button>
                 </div>
 
-                <!-- blur group 1 -->
-                <div class="lg:hidden absolute top-0 -left-0 z-0">
+                <!-- blur group 1 overflow-hidden w-[471px] h-[454px]-->
+                <div class="blur-group lg:hidden absolute -top-14 -left-28 blur-[60px] sm:blur-0 sm:-top-12 sm:-left-10 z-0 overflow-hidden w-[471px] h-[454px] sm:overflow-visible ">
                     <!-- blur circle -->
-                    <BlurUnit class="absolute -top-[70px] left-0" />
+                    <BlurUnit class="absolute -top-[70px] left-0  " />
                         
                     <!-- blur circle -->
-                    <BlurUnit class="absolute -top-[38px] left-[109px]" />
+                    <BlurUnit class="absolute -top-[38px] left-[109px] " />
                     
                 </div>
                 
@@ -52,8 +53,8 @@ import BlurUnit from "@/components/UI/BlurUnit.vue";
 import Title from "@/components/UI/Title.vue";
 
 const contentContainer = ref(null)
-const maxOffsetContent = ref(150)
-const maxOffsetBlur = ref(250)
+const maxOffsetContent = ref(60)
+const maxOffsetBlur = ref(120)
 const offsetContent = ref(0)
 const offsetBlur = ref(0)
 
@@ -62,8 +63,8 @@ const getBlurOffset = computed(()=> `${offsetBlur.value}px`)
 
 function setOffset() {
     //animation 1
-    offsetContent.value = ( (contentContainer.value.getBoundingClientRect().bottom - contentContainer.value.offsetHeight)/ contentContainer.value.offsetHeight ) * maxOffsetContent.value
-    offsetBlur.value = ( (contentContainer.value.getBoundingClientRect().bottom - contentContainer.value.offsetHeight)/ contentContainer.value.offsetHeight ) * maxOffsetBlur.value
+    offsetContent.value = ( (contentContainer.value.getBoundingClientRect().bottom - contentContainer.value.offsetHeight - 100)/ contentContainer.value.offsetHeight ) * maxOffsetContent.value
+    offsetBlur.value = ( (contentContainer.value.getBoundingClientRect().bottom - contentContainer.value.offsetHeight - 100)/ contentContainer.value.offsetHeight ) * maxOffsetBlur.value
     //animation 2
     // offset.value = ( -(contentContainer.value.getBoundingClientRect().top - contentContainer.value.offsetHeight)/ contentContainer.value.offsetHeight ) * maxOffset.value
     
@@ -80,15 +81,13 @@ function setOffset() {
     else if(offsetBlur.value < 0){
         offsetBlur.value = 0
     }
-    // console.log(offset.value)
-    // console.log((contentContainer.value.getBoundingClientRect().bottom - contentContainer.value.offsetHeight)/ contentContainer.value.offsetHeight)
    
 }
 
-//observer for card animation
 onMounted(() => {
     window.addEventListener('scroll',setOffset)
 
+    //observer for card animation
     const observer = new IntersectionObserver((entries) => {
         entries.forEach((entry) => {
             if (entry.isIntersecting) {
@@ -106,6 +105,7 @@ onUnmounted(()=>{
 
 
 </script>
+
 <style scoped>
 .content{
     transform: translateY(v-bind(getContentOffset));

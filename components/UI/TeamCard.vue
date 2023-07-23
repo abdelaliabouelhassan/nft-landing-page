@@ -1,7 +1,7 @@
 <template>
-    <div class="team-card rounded-lg pt-8 pb-[54px] px-[51px] flex flex-col items-center gap-y-8 text-white font-medium">
+    <div class="team-card rounded-lg pt-8 pb-[54px] px-[51px] flex flex-col items-center gap-y-8 text-white text-center font-medium">
         <!-- image -->
-        <div class="rounded-full w-[160px] h-[160px]">
+        <div class="rounded-full ">
             <slot name="image" />
         </div>
         <!-- name -->

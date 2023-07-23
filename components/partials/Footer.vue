@@ -4,18 +4,18 @@
         <!-- footer content -->
         <div class="w-full max-w-[68.5rem] mx-auto px-4 sm:px-16 pb-[100px] z-10">
             <!-- pages links -->
-            <div class="pt-[145px] flex text-white gap-x-10 justify-between text-[25px] font-light">
-                <div class="flex flex-col gap-y-6 w-full">
+            <div class="pt-[145px] flex flex-wrap sm:flex-nowrap text-white gap-10 justify-between text-[25px] font-light">
+                <div class="flex flex-col gap-y-6 w-[40%] sm:w-full">
                     <a href="#" class="hover:opacity-60 transition-colors duration-150 ease-linear">Roadmap</a>
                     <a href="#" class="hover:opacity-60 transition-colors duration-150 ease-linear">Community</a>
                     <a href="#" class="hover:opacity-60 transition-colors duration-150 ease-linear">Blog</a>
                 </div>
-                <div class="flex flex-col gap-y-6 w-full">
+                <div class="flex flex-col gap-y-6 w-[40%] sm:w-full">
                     <a href="#" class="hover:opacity-60 transition-colors duration-150 ease-linear">FAQ's</a>
                     <a href="#" class="hover:opacity-60 transition-colors duration-150 ease-linear">Contact</a>
                     <a href="#" class="hover:opacity-60 transition-colors duration-150 ease-linear">Terms and conditions</a>
                 </div>
-                <div class="flex flex-col gap-y-6 w-full">
+                <div class="flex flex-col gap-y-6  w-1/2 sm:w-full">
                     <a href="#" class="hover:opacity-60 transition-colors duration-150 ease-linear">Discord</a>
                     <a href="#" class="hover:opacity-60 transition-colors duration-150 ease-linear">Instagram</a>
                     <a href="#" class="hover:opacity-60 transition-colors duration-150 ease-linear">Telegram</a>
