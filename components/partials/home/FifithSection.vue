@@ -4,10 +4,10 @@
 
             <div class="w-full max-w-[515px] mx-auto flex flex-col gap-y-[70px] z-10 lg:max-w-[650px] lg:gap-y-[90px] ">
                 <h1 class="text-[2.25rem] sm:text-[3.75rem]  text-center z-10 font-bold lg:text-[7.5rem]">Road Map</h1>
-                <div class="text-2xl sm:text-3xl font-bold lg:text-[40px] pr-8">27th September minting</div>
-                <div class="text-2xl sm:text-3xl font-bold lg:text-[40px] text-end pl-8">20th September Pre minting</div>
-                <div class="text-2xl sm:text-3xl font-bold lg:text-[40px] pr-8">16th August Announcement</div>
-                <div class="text-2xl sm:text-3xl font-bold lg:text-[40px] text-end pl-8">Staking Implementation TBA</div>
+                <div class="list-element-text list-element-text-content text-2xl sm:text-3xl font-bold lg:text-[40px] pr-8">27th September minting</div>
+                <div class="list-element-text list-element-text-content text-2xl sm:text-3xl font-bold lg:text-[40px] text-end pl-8">20th September Pre minting</div>
+                <div class="list-element-text list-element-text-content text-2xl sm:text-3xl font-bold lg:text-[40px] pr-8">16th August Announcement</div>
+                <div class="list-element-text list-element-text-content text-2xl sm:text-3xl font-bold lg:text-[40px] text-end pl-8">Staking Implementation TBA</div>
             </div>
             <div class="blur-group absolute top-0 -right-64 z-0 lg:top-auto lg:bottom-0 h-fit">
                 <BlurUnit class="blur-[80px]"/>
@@ -43,11 +43,34 @@ function setOffset() {
    
 }
 
+function highlight() {
+    let elements = document.querySelectorAll('.list-element-text')
+    let highlightMargin = 50
+    if(window.innerWidth >= 640){
+        highlightMargin = 65
+    }
+    elements.forEach(element => {
+        if(element.getBoundingClientRect().top < (window.innerHeight/2)+highlightMargin
+            && element.getBoundingClientRect().top > (window.innerHeight/2)-highlightMargin){
+            element.classList.add('highlight')
+        }else{
+            element.classList.remove('highlight')
+        }
+        
+    });
+}
+
+function animate() {
+    setOffset()
+    highlight()
+}
+
+
 onMounted(() => {
-    window.addEventListener('scroll',setOffset)
+    window.addEventListener('scroll',animate)
 });
 onUnmounted(()=>{
-    window.removeEventListener('scroll',setOffset)
+    window.removeEventListener('scroll',animate)
 })
 
 
@@ -61,4 +84,17 @@ onUnmounted(()=>{
     transform: translateY(v-bind(getBlurOffset));
     transition: transform 200ms ease;
 }
+
+.list-element-text  {
+    transition: background 200ms ease;
+}
+.list-element-text:hover  , .list-element-text.highlight  {
+ color:#BC3689;
+}
+.list-element-text:hover .list-element-text-content , .list-element-text.highlight .list-element-text-content {
+    font-weight: bold;
+}
+
+
 </style>
+

@@ -6,7 +6,9 @@
             <div class="flex rounded-2xl overflow-hidden h-[110px] sm:h-[144px] bg-black relative w-full max-w-[360px] sm:max-w-[512px] z-10 lg:hidden">
                 <div class=" text-white pb-[17px] h-full pl-4 sm:pr-4 relative w-[313px]">
                     <img class="w-[160px] sm:w-[300px] mt-2 sm:mt-0" src="/images/home/certic-logo.svg" alt="" srcset="">
-                    <div class="text-lg sm:text-[32px] font-bold leading-snug absolute bottom-[17px] left-9 sm:left-1/2 sm:-translate-x-1/2 w-max">Secruity Audit</div>
+                    <div class="text-lg sm:text-[32px] font-bold leading-snug absolute bottom-[17px] left-9 sm:left-1/2 sm:-translate-x-1/2 w-max">
+                        <Title  text="Secruity Audit" />
+                    </div>
                 </div>
                 <div class="rounded-full bg-[#D9D9D9] pb-[17px] w-[200px] h-[200px] sm:w-[252px] sm:h-[252px] absolute -right-[68px] top-1/2 -translate-y-1/2">
                     <div class="absolute bottom-[85px] sm:bottom-[95px] left-[40px] sm:left-[60px] font-bold">
@@ -24,9 +26,11 @@
                     <img src="/images/home/security-audit.svg" alt="" srcset="">
                 </div>
                 <div class="w-full max-w-[440px] xl:max-w-[450px]">
-                    <h1 class="text-[3.75rem] font-bold ">Secruity Audit</h1>
+                    <div class="text-[3.75rem] font-bold ">
+                        <Title  text="Secruity Audit" />
+                    </div>
                     <div class="text-3xl font-bold leading-loose">Rising Legends ranked 78th this year for security Protocol.</div>
-                    <button class="bg-primary text-white py-2 px-3 rounded-md font-bold mt-6">View Report</button>
+                    <button class="bg-primary hover:bg-white hover:text-black hover:shadow-xl duration-200 text-white text-3xl py-2 px-3 rounded-md font-bold mt-6">View Report</button>
                 </div>
             </div>
 
@@ -57,6 +61,8 @@
 </template>
 <script setup>
 import BlurUnit from "@/components/UI/BlurUnitRotated.vue"; 
+import Title from "@/components/UI/Title.vue";
+
 const contentContainer = ref(null)
 const maxOffsetBlur = ref(400)
 const offsetBlur = ref(0)
