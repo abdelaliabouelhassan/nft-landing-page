@@ -7,12 +7,12 @@
                 </div>
                 <!-- <h1 >Utility Functions</h1> -->
                 <!-- blur 1 -->
-                <div class="blur-group w-[344px] h-[310px] absolute -top-14 sm:-top-[40px] -right-16 sm:-right-8 blur-[50px] overflow-hidden z-0 lg:hidden">
+                <div v-if="false" class="blur-group w-[344px] h-[310px] absolute -top-14 sm:-top-[40px] -right-16 sm:-right-8 blur-[50px] overflow-hidden z-0 lg:hidden">
                     <BlurUnit class="w-[344px] h-[310px] absolute -top-0 right-0  blur-[80px]"/>
                 </div>
                 
                 <!-- blur 2 -->
-                <div class="blur-group hidden absolute -top-[110px] -left-20 z-0 lg:block w-[403px]  h-[401px] rounded-full overflow-hidden blur-[80px]">
+                <div v-if="false" class="blur-group hidden absolute -top-[110px] -left-20 z-0 lg:block w-[403px]  h-[401px] rounded-full overflow-hidden blur-[80px]">
                     <div class="absolute top-0 left-0">
                         <div class="absolute top-0 left-[24px]">
                             <BlurUnit class="blur-[80px]"/>

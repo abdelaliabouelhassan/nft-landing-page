@@ -22,7 +22,7 @@
                 </div>
 
                 <!-- blur group -->
-                <div class="blur-group w-[451px] h-[477px] absolute -left-24 -top-14 sm:top-0 sm:left-0   overflow-hidden blur-[50px] sm:overflow-visible sm:blur-none">
+                <div v-if="false" class="blur-group w-[451px] h-[477px] absolute -left-24 -top-14 sm:top-0 sm:left-0   overflow-hidden blur-[50px] sm:overflow-visible sm:blur-none">
                     <div class="absolute top-0 left-0">
                         <BlurUnit class="blur-[100px]"/>
                     </div>

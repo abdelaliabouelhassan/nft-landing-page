@@ -37,7 +37,7 @@
             </div>
 
             <!-- blurs 1-->
-            <div class=" absolute -top-[135px] left-1/2 -translate-x-1/2 w-[460px] h-[713px] blur-[80px] overflow-hidden lg:hidden">
+            <div v-if="false" class=" absolute -top-[135px] left-1/2 -translate-x-1/2 w-[460px] h-[713px] blur-[80px] overflow-hidden lg:hidden">
                 <div class="blur-group absolute top-0 left-0">
                     <div class="absolute top-0 left-[24px]">
                         <BlurUnit class="blur-[100px]"/>
@@ -65,7 +65,7 @@
             </div>
 
             <!-- blurs 2-->
-            <div class="blur-group hidden absolute -top-[247px] xl:-top-[113px]  left-16 w-full lg:block">
+            <div v-if="false" class="blur-group hidden absolute -top-[247px] xl:-top-[113px]  left-16 w-full lg:block">
                 <div class="absolute top-0 left-0 w-[622px] h-[500px] blur-[80px] overflow-hidden">
                     <div class="absolute top-0 left-0">
                         <div class="absolute top-0 left-[24px]">
