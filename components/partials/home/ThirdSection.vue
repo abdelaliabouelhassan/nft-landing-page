@@ -71,6 +71,8 @@ const offsetBlur = ref(0)
 const getContentOffset = computed(()=> `-${offsetContent.value}px`)
 const getBlurOffset = computed(()=> `${offsetBlur.value}px`)
 
+const width = ref(null)
+
 function setOffset() {
     //animation 1
     let topOffset = 400
@@ -78,6 +80,7 @@ function setOffset() {
         topOffset = 100
     }
     offsetContent.value = ( (contentContainer.value.getBoundingClientRect().bottom - contentContainer.value.offsetHeight - topOffset)/ contentContainer.value.offsetHeight ) * maxOffsetContent.value
+   if(width.value > 1200)
     offsetBlur.value = ( (contentContainer.value.getBoundingClientRect().bottom - contentContainer.value.offsetHeight - topOffset)/ contentContainer.value.offsetHeight ) * maxOffsetBlur.value
     
     
@@ -119,6 +122,10 @@ function animate() {
 }
 
 onMounted(() => {
+    width.value = window.innerWidth
+    window.addEventListener('resize', () => {
+        width.value = window.innerWidth
+    })
     window.addEventListener('scroll',animate)
 });
 onUnmounted(()=>{
@@ -131,10 +138,11 @@ onUnmounted(()=>{
     transition: background 200ms ease;
     background: linear-gradient(180deg, #000000 , #000000 );
 }
-.list-element:hover .list-element-number , .list-element.highlight .list-element-number {
+
+.list-element-number , .list-element.highlight .list-element-number {
 background: linear-gradient(180deg, #BC3689 0%, #C73585 33.33%, #C53072 59.38%, #713393 94.27%);
 }
-.list-element:hover .list-element-content , .list-element.highlight .list-element-content {
+.list-element.highlight .list-element-content {
     font-weight: bold;
 }
 .content{
@@ -146,5 +154,12 @@ transform: translateY(v-bind(getBlurOffset));
 transition: transform 200ms ease;
 }
 
+
+/* .list-element:hover .list-element-number , .list-element.highlight .list-element-number {
+background: linear-gradient(180deg, #BC3689 0%, #C73585 33.33%, #C53072 59.38%, #713393 94.27%);
+}
+.list-element:hover .list-element-content , .list-element.highlight .list-element-content {
+    font-weight: bold;
+} */
 
 </style>

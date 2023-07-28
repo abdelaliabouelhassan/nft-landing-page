@@ -117,9 +117,12 @@ const offsetBlur = ref(0)
 const getContentOffset = computed(()=> `-${offsetContent.value}px`)
 const getBlurOffset = computed(()=> `${offsetBlur.value}px`)
 
+const width = ref(null)
+
 function setOffset() {
     //animation 1
     offsetContent.value = ( (contentContainer.value.getBoundingClientRect().bottom - contentContainer.value.offsetHeight - 200)/ contentContainer.value.offsetHeight ) * maxOffsetContent.value
+    if(width.value > 1200)
     offsetBlur.value = ( (contentContainer.value.getBoundingClientRect().bottom - contentContainer.value.offsetHeight - 200)/ contentContainer.value.offsetHeight ) * maxOffsetBlur.value
     
     if(offsetContent.value > maxOffsetContent.value){
@@ -139,6 +142,10 @@ function setOffset() {
 }
 
 onMounted(() => {
+    width.value = window.innerWidth
+    window.addEventListener('resize', () => {
+        width.value = window.innerWidth
+    })
     window.addEventListener('scroll',setOffset)
 });
 onUnmounted(()=>{

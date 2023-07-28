@@ -58,13 +58,16 @@ const maxOffsetBlur = ref(120)
 const offsetContent = ref(0)
 const offsetBlur = ref(0)
 
+const width = ref(null)
+
 const getContentOffset = computed(()=> `-${offsetContent.value}px`)
 const getBlurOffset = computed(()=> `${offsetBlur.value}px`)
 
 function setOffset() {
     //animation 1
     offsetContent.value = ( (contentContainer.value.getBoundingClientRect().bottom - contentContainer.value.offsetHeight - 100)/ contentContainer.value.offsetHeight ) * maxOffsetContent.value
-    offsetBlur.value = ( (contentContainer.value.getBoundingClientRect().bottom - contentContainer.value.offsetHeight - 100)/ contentContainer.value.offsetHeight ) * maxOffsetBlur.value
+    if(width.value > 1200)
+     offsetBlur.value = ( (contentContainer.value.getBoundingClientRect().bottom - contentContainer.value.offsetHeight - 100)/ contentContainer.value.offsetHeight ) * maxOffsetBlur.value
     //animation 2
     // offset.value = ( -(contentContainer.value.getBoundingClientRect().top - contentContainer.value.offsetHeight)/ contentContainer.value.offsetHeight ) * maxOffset.value
     
@@ -85,6 +88,10 @@ function setOffset() {
 }
 
 onMounted(() => {
+    width.value = window.innerWidth
+    window.addEventListener('resize', () => {
+        width.value = window.innerWidth
+    })
     window.addEventListener('scroll',setOffset)
 
     //observer for card animation
@@ -99,7 +106,7 @@ onMounted(() => {
     observer.observe(document.querySelector("#card"));
 });
 onUnmounted(()=>{
-    window.removeEventListener('scroll',setOffset)
+     window.removeEventListener('scroll',setOffset)
 })
 
 
