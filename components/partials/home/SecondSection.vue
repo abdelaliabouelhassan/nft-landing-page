@@ -18,7 +18,7 @@
                 </div>
 
                 <!-- blur group 1 overflow-hidden w-[471px] h-[454px]-->
-                <div v-if="false" class="blur-group lg:hidden absolute -top-14 -left-28 blur-[60px] sm:blur-0 sm:-top-12 sm:-left-10 z-0 overflow-hidden w-[471px] h-[454px] sm:overflow-visible ">
+                <div v-if="width > 1200" class="blur-group lg:hidden absolute -top-14 -left-28 blur-[60px] sm:blur-0 sm:-top-12 sm:-left-10 z-0 overflow-hidden w-[471px] h-[454px] sm:overflow-visible ">
                     <!-- blur circle -->
                     <BlurUnit class="absolute -top-[70px] left-0  " />
                         
@@ -28,7 +28,7 @@
                 </div>
                 
                 <!-- blur group 2 lg-->
-                <div v-if="false" class="blur-group hidden lg:block absolute -top-[175px] -left-[56px]  z-0">
+                <div v-if="width > 1200" class="blur-group hidden lg:block absolute -top-[175px] -left-[56px]  z-0">
                     <!-- blur circle -->
                     <BlurUnit class="absolute top-0" />
                         
@@ -92,7 +92,7 @@ onMounted(() => {
     window.addEventListener('resize', () => {
         width.value = window.innerWidth
     })
-   // window.addEventListener('scroll',setOffset)
+    window.addEventListener('scroll',setOffset)
 
     //observer for card animation
     const observer = new IntersectionObserver((entries) => {

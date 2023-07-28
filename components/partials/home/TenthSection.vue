@@ -35,7 +35,7 @@
             </div>
 
             <!-- blur group -->
-            <div v-if="false" class="blur-group hidden xs:block absolute -top-[200px] -left-[20%] xs:-left-[5%] sm:left-[10%] z-0 lg:top-10 lg:left-8">
+            <div v-if="width > 1200" class="blur-group hidden xs:block absolute -top-[200px] -left-[20%] xs:-left-[5%] sm:left-[10%] z-0 lg:top-10 lg:left-8">
                 <div class="absolute top-0 left-[88px] ">
                     <div class="absolute top-0 left-0">
                         <BlurUnit class="blur-[60px]"/>
@@ -83,7 +83,7 @@ function setOffset() {
 }
 
 onMounted(() => {
-  //  window.addEventListener('scroll',setOffset)
+    window.addEventListener('scroll',setOffset)
 
     //observer for card animation
     const observer = new IntersectionObserver((entries) => {
