@@ -55,40 +55,40 @@ export default defineNuxtPlugin({
     hooks: {
       // You can directly register Nuxt app hooks here
       'app:mounted'() {
-        // let h1Elements = [];
-        // const h1Array = [...document.querySelectorAll('.randomtext')];
+        let h1Elements = [];
+        const h1Array = [...document.querySelectorAll('.randomtext')];
     
       
-        // setTimeout(() => {
-        //     h1Array.forEach((header,idx) => {
-        //         h1Elements[idx] = new Title(idx, header)
-        //     })
+        setTimeout(() => {
+            h1Array.forEach((header,idx) => {
+                h1Elements[idx] = new Title(idx, header)
+            })
         
-        //     let options = {
-        //         rootMargin: '0px',
-        //         threshold: 0.0
-        //       }
+            let options = {
+                rootMargin: '0px',
+                threshold: 0.0
+              }
               
-        //       let callback = (entries) => {
-        //         entries.forEach((entry) => {
-        //             if(entry.isIntersecting){
-        //                 h1Elements[+entry.target.className].intersecting = true;
-        //                 h1Elements[+entry.target.className].animate()
+              let callback = (entries) => {
+                entries.forEach((entry) => {
+                    if(entry.isIntersecting){
+                        h1Elements[+entry.target.className].intersecting = true;
+                        h1Elements[+entry.target.className].animate()
                       
-        //             }else{
-        //                 h1Elements[+entry.target.className].reset()
-        //             }
-        //         });
-        //       };
+                    }else{
+                        h1Elements[+entry.target.className].reset()
+                    }
+                });
+              };
             
-        //       let observer = new IntersectionObserver(callback, options);
+              let observer = new IntersectionObserver(callback, options);
         
-        //       h1Elements.forEach(instance => {
-        //         observer.observe(instance.element)
-        //         instance.element.style.opacity = 1
-        //       });
+              h1Elements.forEach(instance => {
+                observer.observe(instance.element)
+                instance.element.style.opacity = 1
+              });
     
-        // }, 0)
+        }, 0)
       
       }
     }
