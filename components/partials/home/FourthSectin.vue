@@ -23,7 +23,7 @@
                     </div>
 
                     <!-- comming soon card -->
-                    <div class="bg-white hover:shadow-2xl duration-100 flex flex-col items-center gap-y-10 overflow-hidden rounded-2xl py-10 sm:pb-10 sm:pt-11 w-full  relative text-center px-8 xl:gap-y-16">
+                    <div class="bg-white hover:shadow-2xl lg:shadow-none shadow-2xl   lg:border-none duration-100 flex flex-col items-center gap-y-10 overflow-hidden rounded-2xl py-10 sm:pb-10 sm:pt-11 w-full  relative text-center px-8 xl:gap-y-16">
                         <div class="bg-primary text-sm sm:text-base text-white py-2 px-6 absolute top-0 right-0"> comming soon</div>
                         <div class="text-xl sm:text-[26px] font-bold xl:text-[38px]"> stake your NFT’s and earn DeGa </div>
                         <div class="font-bold text-sm sm:text-base xl:text-2xl">Staking coming soon</div>
@@ -31,13 +31,13 @@
                     </div>
                     
                 </div>
-                <div class="content text-[2.25rem] sm:text-[3.75rem] font-bold text-center max-w-[250px] sm:max-w-[400px] text-white ">
+                <div class="content text-[2.25rem] sm:text-[3.75rem] font-bold text-center max-w-[250px] sm:max-w-[400px] lg:text-white text-gray-900 ">
                     <Title text="Staking Coming soon"/>
                 </div>
             </div>
 
             <!-- blurs 1-->
-            <div v-if="width > 1200" class=" absolute -top-[135px] left-1/2 -translate-x-1/2 w-[460px] h-[713px] blur-[80px] overflow-hidden lg:hidden">
+            <div v-if="width > 1023" class=" absolute -top-[135px] left-1/2 -translate-x-1/2 w-[460px] h-[713px] blur-[80px] overflow-hidden lg:hidden">
                 <div class="blur-group absolute top-0 left-0">
                     <div class="absolute top-0 left-[24px]">
                         <BlurUnit class="blur-[100px]"/>
@@ -65,7 +65,7 @@
             </div>
 
             <!-- blurs 2-->
-            <div v-if="width > 1200" class="blur-group hidden absolute -top-[247px] xl:-top-[113px]  left-16 w-full lg:block">
+            <div v-if="width > 1023" class="blur-group hidden absolute -top-[247px] xl:-top-[113px]  left-16 w-full lg:block">
                 <div class="absolute top-0 left-0 w-[622px] h-[500px] blur-[80px] overflow-hidden">
                     <div class="absolute top-0 left-0">
                         <div class="absolute top-0 left-[24px]">
@@ -122,7 +122,7 @@ const width = ref(null)
 function setOffset() {
     //animation 1
     offsetContent.value = ( (contentContainer.value.getBoundingClientRect().bottom - contentContainer.value.offsetHeight - 200)/ contentContainer.value.offsetHeight ) * maxOffsetContent.value
-    if(width.value > 1200)
+    if(width.value > 1023)
     offsetBlur.value = ( (contentContainer.value.getBoundingClientRect().bottom - contentContainer.value.offsetHeight - 200)/ contentContainer.value.offsetHeight ) * maxOffsetBlur.value
     
     if(offsetContent.value > maxOffsetContent.value){

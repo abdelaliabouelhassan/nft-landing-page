@@ -10,8 +10,8 @@
             <div class=" absolute top-1/2 -translate-y-1/2 left-16 sm:left-36 max-w-[18rem] sm:max-w-lg lg:relative lg:top-0 lg:left-0 flex
                 lg:translate-y-0 xl:max-w-md">
                 <!-- content -->
-                <div class="content z-10 flex flex-col font-medium">
-                    <div class="text-[2.25rem] sm:text-[3.75rem]">
+                <div class="content z-10 flex flex-col font-medium lg:text-white text-white sm:text-gray-100  ">
+                    <div class="text-[2.25rem] sm:text-[3.75rem] ">
                         <Title text="Early Access"/>
                     </div>
                     <h2 class="text-lg sm:text-3xl mt-1 leading-loose xl:leading-normal">Details about early access benefits can be found here</h2> 
@@ -22,7 +22,7 @@
                 </div>
 
                 <!-- blur group -->
-                <div v-if="width > 1200" class="blur-group w-[451px] h-[477px] absolute -left-24 -top-14 sm:top-0 sm:left-0   overflow-hidden blur-[50px] sm:overflow-visible sm:blur-none">
+                <div v-if="width > 1023" class="blur-group w-[451px] h-[477px] absolute -left-24 -top-14 sm:top-0 sm:left-0   overflow-hidden blur-[50px] sm:overflow-visible sm:blur-none">
                     <div class="absolute top-0 left-0">
                         <BlurUnit class="blur-[100px]"/>
                     </div>
@@ -58,7 +58,7 @@ const width = ref(null)
 function setOffset() {
     //animation 1
     offsetContent.value = ( (contentContainer.value.getBoundingClientRect().bottom - contentContainer.value.offsetHeight - 100)/ contentContainer.value.offsetHeight ) * maxOffsetContent.value
-    if(width.value > 1200)
+    if(width.value > 1023)
     offsetBlur.value = ( (contentContainer.value.getBoundingClientRect().bottom - contentContainer.value.offsetHeight - 100)/ contentContainer.value.offsetHeight ) * maxOffsetBlur.value
     
     

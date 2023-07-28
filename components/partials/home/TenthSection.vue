@@ -35,7 +35,7 @@
             </div>
 
             <!-- blur group -->
-            <div v-if="width > 1200" class="blur-group hidden xs:block absolute -top-[200px] -left-[20%] xs:-left-[5%] sm:left-[10%] z-0 lg:top-10 lg:left-8">
+            <div v-if="width > 1023" class="blur-group hidden xs:block absolute -top-[200px] -left-[20%] xs:-left-[5%] sm:left-[10%] z-0 lg:top-10 lg:left-8">
                 <div class="absolute top-0 left-[88px] ">
                     <div class="absolute top-0 left-0">
                         <BlurUnit class="blur-[60px]"/>
@@ -68,9 +68,10 @@ const maxOffsetBlur = ref(400)
 const offsetBlur = ref(0)
 
 const getBlurOffset = computed(()=> `${offsetBlur.value}px`)
-
+const width = ref(null)
 function setOffset() {
     //animation 1
+    if(width.value > 1023)
     offsetBlur.value = ( (contentContainer.value.getBoundingClientRect().bottom - contentContainer.value.offsetHeight)/ contentContainer.value.offsetHeight ) * maxOffsetBlur.value
     
     if(offsetBlur.value > maxOffsetBlur.value){
@@ -83,6 +84,10 @@ function setOffset() {
 }
 
 onMounted(() => {
+     width.value = window.innerWidth
+    window.addEventListener('resize', () => {
+        width.value = window.innerWidth
+    })
     window.addEventListener('scroll',setOffset)
 
     //observer for card animation

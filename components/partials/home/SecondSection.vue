@@ -7,10 +7,10 @@
                 lg:translate-y-0 xl:max-w-xl z-10">
                 <!-- content -->
                 <div class=" content z-10 flex flex-col font-medium  ">
-                    <div class="text-[2.25rem] sm:text-[3.75rem]">
+                    <div class="text-[2.25rem] sm:text-[3.75rem] lg:text-white text-gray-100">
                         <Title  text="Earn More DeGa" />
                     </div>
-                    <h2 class=" text-lg sm:text-3xl mt-1 leading-loose xl:leading-normal">Unleash the power of our Utility based NFT’s collection</h2> 
+                    <h2 class=" text-lg sm:text-3xl mt-1 leading-loose xl:leading-normal lg:text-white text-gray-100">Unleash the power of our Utility based NFT’s collection</h2> 
                     <button class="w-fit mt-6 xl:mt-8 flex items-center justify-center px-9 py-3 text-lg sm:text-3xl bg-white text-primary rounded-lg font-semibold
                             hover:bg-primary hover:text-white transition-colors duration-100 ease-linear">
                         Buy now
@@ -18,7 +18,7 @@
                 </div>
 
                 <!-- blur group 1 overflow-hidden w-[471px] h-[454px]-->
-                <div v-if="width > 1200" class="blur-group lg:hidden absolute -top-14 -left-28 blur-[60px] sm:blur-0 sm:-top-12 sm:-left-10 z-0 overflow-hidden w-[471px] h-[454px] sm:overflow-visible ">
+                <div v-if="width > 1023" class="blur-group lg:hidden absolute -top-14 -left-28 blur-[60px] sm:blur-0 sm:-top-12 sm:-left-10 z-0 overflow-hidden w-[471px] h-[454px] sm:overflow-visible ">
                     <!-- blur circle -->
                     <BlurUnit class="absolute -top-[70px] left-0  " />
                         
@@ -28,7 +28,7 @@
                 </div>
                 
                 <!-- blur group 2 lg-->
-                <div v-if="width > 1200" class="blur-group hidden lg:block absolute -top-[175px] -left-[56px]  z-0">
+                <div v-if="width > 1023" class="blur-group hidden lg:block absolute -top-[175px] -left-[56px]  z-0">
                     <!-- blur circle -->
                     <BlurUnit class="absolute top-0" />
                         
@@ -66,7 +66,7 @@ const getBlurOffset = computed(()=> `${offsetBlur.value}px`)
 function setOffset() {
     //animation 1
     offsetContent.value = ( (contentContainer.value.getBoundingClientRect().bottom - contentContainer.value.offsetHeight - 100)/ contentContainer.value.offsetHeight ) * maxOffsetContent.value
-    if(width.value > 1200)
+    if(width.value > 1023)
      offsetBlur.value = ( (contentContainer.value.getBoundingClientRect().bottom - contentContainer.value.offsetHeight - 100)/ contentContainer.value.offsetHeight ) * maxOffsetBlur.value
     //animation 2
     // offset.value = ( -(contentContainer.value.getBoundingClientRect().top - contentContainer.value.offsetHeight)/ contentContainer.value.offsetHeight ) * maxOffset.value

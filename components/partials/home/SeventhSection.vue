@@ -7,7 +7,7 @@
             <div class="absolute z-10 top-1/2 -translate-y-1/2 right-16  flex justify-end w-fit max-w-lg sm:right-48 lg:relative lg:top-0 lg:right-0 
                 lg:translate-y-0 xl:max-w-md">
                 <!-- content -->
-                <div class="content z-10 flex flex-col font-medium w-fit items-end text-end lg:text-start lg:items-start">
+                <div class="content z-10 flex flex-col font-medium w-fit items-end text-end lg:text-start lg:items-start lg:text-white text-white sm:text-gray-100">
                     <div class="text-[2.25rem] sm:text-[3.75rem]">
                         <Title text="V.I.P rewards"/>
                     </div>
@@ -20,7 +20,7 @@
                 </div>
 
                 <!-- blur group  -->
-                <div v-if="width > 1200" class="blur-group absolute top-0 -left-8 sm:left-[88px] z-0 ">
+                <div v-if="width > 1023" class="blur-group absolute top-0 -left-8 sm:left-[88px] z-0 ">
                     <div class="absolute top-0 left-0">
                         <BlurUnit class="blur-[80px]"/>
                     </div>
@@ -53,7 +53,7 @@ const getBlurOffset = computed(()=> `${offsetBlur.value}px`)
 function setOffset() {
     //animation 1
     offsetContent.value = ( (contentContainer.value.getBoundingClientRect().bottom - contentContainer.value.offsetHeight - 100)/ contentContainer.value.offsetHeight ) * maxOffsetContent.value
-    if(width.value > 1200)
+    if(width.value > 1023)
     offsetBlur.value = ( (contentContainer.value.getBoundingClientRect().bottom - contentContainer.value.offsetHeight - 100)/ contentContainer.value.offsetHeight ) * maxOffsetBlur.value
     
     

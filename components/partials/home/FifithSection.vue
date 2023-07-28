@@ -9,7 +9,7 @@
                 <div class="list-element-text list-element-text-content text-2xl sm:text-3xl font-bold lg:text-[40px] pr-8">16th August Announcement</div>
                 <div class="list-element-text list-element-text-content text-2xl sm:text-3xl font-bold lg:text-[40px] text-end pl-8">Staking Implementation TBA</div>
             </div>
-            <div v-if="width > 1200" class="blur-group absolute top-0 -right-64 z-0 lg:top-auto lg:bottom-0 h-fit">
+            <div v-if="width > 1023" class="blur-group absolute top-0 -right-64 z-0 lg:top-auto lg:bottom-0 h-fit">
                 <BlurUnit class="blur-[80px]"/>
             </div>
         </div>
@@ -34,7 +34,7 @@ function setOffset() {
     if(window.innerWidth >= 1024){
         maxOffsetBlur.value = 400
     }
-    if(width > 1200)
+    if(width > 1023)
      offsetBlur.value = ( (contentContainer.value.getBoundingClientRect().bottom - contentContainer.value.offsetHeight - 100)/ contentContainer.value.offsetHeight ) * maxOffsetBlur.value
    
     if(offsetBlur.value > maxOffsetBlur.value){

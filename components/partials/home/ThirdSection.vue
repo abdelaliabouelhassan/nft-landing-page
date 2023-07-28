@@ -2,17 +2,17 @@
     <section class="pt-[52px] flex flex-col px-4 pb-[110px] sm:pb-[210px] sm:px-16 lg:px-16 lg:flex-row lg:items-center lg:gap-x-14 justify-between
         max-w-[68.5rem] mx-auto xl:px-0 lg:pt-[200px] overflow-x-clip lg:overflow-x-visible">
             <div  class="relative flex text-white self-end lg:self-auto ">
-                <div class="content mr-4 text-[2.25rem] sm:text-[3.75rem] max-w-[10rem] sm:max-w-xs text-end z-10 font-bold lg:text-start">
+                <div class="content mr-4 lg:text-white text-gray-900 text-[2.25rem] sm:text-[3.75rem] max-w-[10rem] sm:max-w-xs text-end z-10 font-bold lg:text-start">
                     <Title text="Utility Functions"/>
                 </div>
                 <!-- <h1 >Utility Functions</h1> -->
                 <!-- blur 1 -->
-                <div v-if="width > 1200" class="blur-group w-[344px] h-[310px] absolute -top-14 sm:-top-[40px] -right-16 sm:-right-8 blur-[50px] overflow-hidden z-0 lg:hidden">
+                <div v-if="width > 1023" class="blur-group w-[344px] h-[310px] absolute -top-14 sm:-top-[40px] -right-16 sm:-right-8 blur-[50px] overflow-hidden z-0 lg:hidden">
                     <BlurUnit class="w-[344px] h-[310px] absolute -top-0 right-0  blur-[80px]"/>
                 </div>
                 
                 <!-- blur 2 -->
-                <div v-if="width > 1200" class="blur-group hidden absolute -top-[110px] -left-20 z-0 lg:block w-[403px]  h-[401px] rounded-full overflow-hidden blur-[80px]">
+                <div v-if="width > 1023" class="blur-group hidden absolute -top-[110px] -left-20 z-0 lg:block w-[403px]  h-[401px] rounded-full overflow-hidden blur-[80px]">
                     <div class="absolute top-0 left-0">
                         <div class="absolute top-0 left-[24px]">
                             <BlurUnit class="blur-[80px]"/>
@@ -80,7 +80,7 @@ function setOffset() {
         topOffset = 100
     }
     offsetContent.value = ( (contentContainer.value.getBoundingClientRect().bottom - contentContainer.value.offsetHeight - topOffset)/ contentContainer.value.offsetHeight ) * maxOffsetContent.value
-   if(width.value > 1200)
+   if(width.value > 1023)
     offsetBlur.value = ( (contentContainer.value.getBoundingClientRect().bottom - contentContainer.value.offsetHeight - topOffset)/ contentContainer.value.offsetHeight ) * maxOffsetBlur.value
     
     
