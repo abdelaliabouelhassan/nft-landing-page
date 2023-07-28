@@ -92,7 +92,7 @@ onMounted(() => {
     window.addEventListener('resize', () => {
         width.value = window.innerWidth
     })
-    window.addEventListener('scroll',setOffset)
+   // window.addEventListener('scroll',setOffset)
 
     //observer for card animation
     const observer = new IntersectionObserver((entries) => {

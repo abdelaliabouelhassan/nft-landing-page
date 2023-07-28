@@ -83,7 +83,7 @@ onMounted(() => {
     window.addEventListener('resize', () => {
         width.value = window.innerWidth
     })
-    window.addEventListener('scroll',setOffset)
+   // window.addEventListener('scroll',setOffset)
     const observer = new IntersectionObserver((entries) => {
         entries.forEach((entry) => {
             if (entry.isIntersecting) {

@@ -126,7 +126,7 @@ onMounted(() => {
     window.addEventListener('resize', () => {
         width.value = window.innerWidth
     })
-    window.addEventListener('scroll',animate)
+   // window.addEventListener('scroll',animate)
 });
 onUnmounted(()=>{
     window.removeEventListener('scroll',animate)

@@ -146,7 +146,7 @@ onMounted(() => {
     window.addEventListener('resize', () => {
         width.value = window.innerWidth
     })
-    window.addEventListener('scroll',setOffset)
+    //window.addEventListener('scroll',setOffset)
 });
 onUnmounted(()=>{
     window.removeEventListener('scroll',setOffset)

@@ -83,7 +83,7 @@ function setOffset() {
 }
 
 onMounted(() => {
-    window.addEventListener('scroll',setOffset)
+  //  window.addEventListener('scroll',setOffset)
 
     //observer for card animation
     const observer = new IntersectionObserver((entries) => {
